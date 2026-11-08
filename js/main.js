@@ -20,7 +20,8 @@
     function fadeInBgm() {
         const start = performance.now();
         const step = (now) => {
-            const t = Math.min((now - start) / 1500, 1);
+            // 첫 프레임의 now는 start보다 살짝 이를 수 있어 0 미만이 되지 않게 제한
+            const t = Math.max(0, Math.min((now - start) / 1500, 1));
             bgm.volume = BGM_VOLUME * t;
             if (t < 1) requestAnimationFrame(step);
         };
@@ -162,7 +163,6 @@
 
         intro.classList.add('is-leaving');
         body.classList.remove('is-locked');
-        document.querySelector('meta[name="theme-color"]').content = '#eef0e9';
 
         setTimeout(() => render({ focus: false }), 400);
         setTimeout(() => { intro.hidden = true; }, 1000);
