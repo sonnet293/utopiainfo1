@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0c0e0d">
+    <meta name="theme-color" content="#0d0f10">
     <title>EDEN | Humanity Beyond Limitation</title>
     <script>document.documentElement.classList.add('js');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 </head>
@@ -55,237 +55,279 @@
         </nav>
     </div>
 
+    <!--
+        문서 작성 안내
+        .doc-body 안에 내용을 넣으면 스크롤 애니메이션, 표의 모바일 스크롤, 왼쪽 목차가 자동으로 적용됩니다.
+
+        <h3>큰 제목</h3>   <h4>작은 제목</h4>   <p>문단</p>   <ul>, <ol> 목록
+        <strong>굵게</strong>
+        <mark>형광펜</mark>
+        <span class="red">빨간 글씨</span>
+        <span class="redact">검열로 가릴 내용</span>
+        <blockquote><p>인용문</p><cite>출처</cite></blockquote>
+        <table> 표 </table>
+        <div class="note"><strong>제목</strong><p>안내 상자</p></div>
+    -->
+
     <!--총공지-->
     <main class="view page" id="view-section-0" hidden>
-        <section class="page-hero">
-            <div class="doc-head reveal">
-                <dl class="doc-meta">
+        <article class="doc">
+            <div class="doc-titlebar reveal"><span>EF-NTC-0041_총공지.edoc</span><span>읽기 전용</span></div>
+            <header class="doc-header">
+                <p class="eyebrow reveal">01 / Notice</p>
+                <h2 class="reveal" tabindex="-1">총공지</h2>
+                <p class="lead reveal">모든 시민은 아래 공지를 숙지할 의무가 있습니다.</p>
+                <dl class="doc-meta reveal">
                     <div><dt>문서번호</dt><dd>EF-NTC-0041</dd></div>
                     <div><dt>보안등급</dt><dd>일반</dd></div>
-                    <div><dt>발신부서</dt><dd>시민행복관리국</dd></div>
-                    <div><dt>보존기한</dt><dd>5년</dd></div>
+                    <div><dt>작성부서</dt><dd>시민행복관리국</dd></div>
+                    <div><dt>최종수정</dt><dd>E.41.11.08</dd></div>
                 </dl>
-                <table class="approval">
-                    <tr><th>담당</th><th>검토</th><th>승인</th></tr>
-                    <tr><td><span class="seal">印</span></td><td><span class="seal">印</span></td><td><span class="redact">승인자</span></td></tr>
+            </header>
+
+            <div class="doc-body">
+                <h3>문서의 목적</h3>
+                <p>본 문서는 에덴에 거주하는 모든 시민이 알아야 할 운영 사항을 정리한 것입니다. 재단은 시민 여러분의 평온한 일상을 위해 필요한 정보만을 선별하여 제공합니다. <strong>제공되지 않은 정보는 시민 여러분에게 필요하지 않은 정보입니다.</strong></p>
+                <p>공지 내용은 사전 안내 없이 변경될 수 있으며, 변경 이전의 내용은 <mark>처음부터 존재하지 않았던 것으로 간주</mark>합니다. 이전 공지를 기억하는 경우 가까운 상담소에 방문해 주시기 바랍니다.</p>
+
+                <blockquote>
+                    <p>우리는 당신에게 묻지 않습니다. 당신이 무엇을 원하는지 이미 알고 있기 때문입니다.</p>
+                    <cite>EDEN 재단 설립 선언문 제1장</cite>
+                </blockquote>
+
+                <h3>최근 공지</h3>
+                <table>
+                    <thead><tr><th>일자</th><th>구분</th><th>제목</th></tr></thead>
+                    <tbody>
+                        <tr><td>11.08</td><td><span class="red"><strong>긴급</strong></span></td><td>제7구역 정기 정화 작업 안내</td></tr>
+                        <tr><td>11.03</td><td>운영</td><td>중앙 정원 야간 개방 시간 변경</td></tr>
+                        <tr><td>10.27</td><td>시스템</td><td>꿈 동기화 서비스 2.4 업데이트</td></tr>
+                        <tr><td>10.15</td><td>행사</td><td>제41회 창립 기념 축제 개최</td></tr>
+                        <tr><td>10.02</td><td>운영</td><td>외벽 관측창 폐쇄 안내</td></tr>
+                    </tbody>
                 </table>
+
+                <h3>제7구역 정화 작업</h3>
+                <p>11월 8일 22시부터 제7구역에서 정기 정화 작업이 진행됩니다. 작업 시간 동안 해당 구역의 소리가 들리지 않을 수 있으며, 이는 정상적인 현상입니다. 인근 구역의 시민께서는 <strong>창문을 닫고 지정된 음악을 청취</strong>해 주시기 바랍니다.</p>
+                <p>작업이 끝난 뒤 제7구역의 거주자 수가 달라 보일 수 있습니다. <span class="red">거주자 수를 세는 행위는 시민 수칙 위반입니다.</span> 작업 대상자 명단은 <span class="redact">제7구역 증상자 전원</span>이며 외부에 공개되지 않습니다.</p>
+
+                <div class="note">
+                    <strong>시민 등록 절차 개정</strong>
+                    <p>신규 시민은 입주 후 72시간 이내에 행복도 측정을 완료해 주세요. 측정 결과는 언제나 만족스럽게 표시됩니다.</p>
+                </div>
+
+                <h3>시민 수칙</h3>
+                <p>아래 수칙은 시민 전원에게 적용됩니다. 수칙을 어길 경우 순응도가 차감되며, 반복 위반자는 별도의 상담을 받게 됩니다.</p>
+                <ol>
+                    <li>하루 한 번 이상 감사를 표현합니다.</li>
+                    <li><mark>외벽 너머에 대해 질문하지 않습니다.</mark></li>
+                    <li>이웃의 부재를 알아차리지 않습니다.</li>
+                    <li>불안을 느끼면 가까운 상담소를 방문합니다.</li>
+                    <li><span class="red"><strong>꿈의 내용을 타인에게 말하지 않습니다.</strong></span></li>
+                </ol>
             </div>
-            <div class="stamp reveal" aria-hidden="true">전 시민 회람</div>
-            <p class="eyebrow reveal">01 / Notice</p>
-            <h2 class="reveal" tabindex="-1">총공지</h2>
-            <p class="lead reveal">모든 시민은 아래 공지를 숙지할 의무가 있습니다. 숙지하지 않아도 불이익은 없습니다. 아마도요.</p>
-            <p class="scroll-cue reveal" aria-hidden="true">Scroll</p>
-        </section>
+        </article>
 
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">필독 안내</h3>
-            <div class="callout reveal">
-                <strong>시민 등록 절차가 개정되었습니다.</strong>
-                <p>신규 시민은 입주 후 72시간 이내에 행복도 측정을 완료해 주세요. 측정 결과는 언제나 만족스럽게 표시됩니다.</p>
-            </div>
-        </section>
-
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">최근 공지</h3>
-            <ol class="notice-list">
-                <li class="reveal">
-                    <time datetime="2026-11-08">2026.11.08</time>
-                    <span class="tag tag--alert">긴급</span>
-                    <h4>제7구역 정기 정화 작업 안내</h4>
-                    <p>작업 시간 동안 <span class="redact">제7구역 주민</span>의 소리가 들리지 않을 수 있습니다. 정상적인 현상입니다.</p>
-                </li>
-                <li class="reveal">
-                    <time datetime="2026-11-03">2026.11.03</time>
-                    <span class="tag">운영</span>
-                    <h4>중앙 정원 야간 개방 시간 변경</h4>
-                    <p>중앙 정원의 야간 개방이 21시에서 23시까지로 연장됩니다. 조명은 그대로 유지됩니다.</p>
-                </li>
-                <li class="reveal">
-                    <time datetime="2026-10-27">2026.10.27</time>
-                    <span class="tag">시스템</span>
-                    <h4>꿈 동기화 서비스 2.4 업데이트</h4>
-                    <p>악몽 발생률이 12% 감소했습니다. 남은 악몽은 다음 업데이트에서 개선될 예정입니다.</p>
-                </li>
-                <li class="reveal">
-                    <time datetime="2026-10-15">2026.10.15</time>
-                    <span class="tag">행사</span>
-                    <h4>제41회 창립 기념 축제 개최</h4>
-                    <p>전 시민 참여 행사입니다. 미소 유지 시간에 따라 추가 배급이 지급됩니다.</p>
-                </li>
-                <li class="reveal">
-                    <time datetime="2026-10-02">2026.10.02</time>
-                    <span class="tag">운영</span>
-                    <h4>외벽 관측창 폐쇄 안내</h4>
-                    <p>시민 여러분의 정서 안정을 위해 외벽 관측창을 영구 폐쇄합니다. 사유: <span class="redact">외부 생존자 목격</span></p>
-                </li>
-            </ol>
-        </section>
-
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">시민 수칙</h3>
-            <ol class="rule-list">
-                <li class="reveal">하루 한 번 이상 감사를 표현합니다.</li>
-                <li class="reveal">외벽 너머에 대해 질문하지 않습니다.</li>
-                <li class="reveal">이웃의 부재를 알아차리지 않습니다.</li>
-                <li class="reveal">불안을 느끼면 가까운 상담소를 방문합니다.</li>
-            </ol>
-        </section>
-
-        <button class="next-page reveal" data-section="1"><span>다음</span>세계관</button>
+        <button class="next-page reveal" data-section="1"><span>다음 문서</span>세계관</button>
     </main>
 
     <!--세계관-->
     <main class="view page" id="view-section-1" hidden>
-        <section class="page-hero">
-            <div class="doc-head reveal">
-                <dl class="doc-meta">
+        <article class="doc">
+            <div class="doc-titlebar reveal"><span>EF-ARC-0007_세계관.edoc</span><span>읽기 전용</span></div>
+            <header class="doc-header">
+                <p class="eyebrow reveal">02 / World</p>
+                <h2 class="reveal" tabindex="-1">세계관</h2>
+                <p class="lead reveal">결핍이 사라진 도시, 에덴. 사람들은 이곳에서 더 이상 아무것도 원하지 않게 되었습니다.</p>
+                <dl class="doc-meta reveal">
                     <div><dt>문서번호</dt><dd>EF-ARC-0007</dd></div>
-                    <div><dt>보안등급</dt><dd>대외비</dd></div>
-                    <div><dt>발신부서</dt><dd>기록보존실</dd></div>
-                    <div><dt>보존기한</dt><dd>영구</dd></div>
+                    <div><dt>보안등급</dt><dd class="red">대외비</dd></div>
+                    <div><dt>작성부서</dt><dd>기록보존실</dd></div>
+                    <div><dt>최종수정</dt><dd>E.41.09.30</dd></div>
                 </dl>
-                <table class="approval">
-                    <tr><th>담당</th><th>검토</th><th>승인</th></tr>
-                    <tr><td><span class="seal">印</span></td><td><span class="seal">印</span></td><td><span class="redact">승인자</span></td></tr>
+            </header>
+
+            <div class="doc-body">
+                <h3>에덴 개요</h3>
+                <p>에덴은 대붕괴 이후 인류에게 남은 <strong>마지막 거주 구역</strong>입니다. 약 40만 명의 시민이 거대한 외벽과 돔 안에서 살아가고 있으며, 식량과 주거, 의료, 감정에 이르는 모든 것이 EDEN 재단의 관리 아래 공급됩니다.</p>
+                <p>도시에는 범죄도 빈곤도 없습니다. 시민들은 매일 아침 그날의 기분을 배정받고, 배정받은 기분으로 하루를 보냅니다. 재단의 공식 통계에 따르면 시민 만족도는 <mark>29년째 100%</mark>를 유지하고 있습니다.</p>
+
+                <h3>유토피아 증후군</h3>
+                <p>E.41년부터 일부 시민에게서 원인 불명의 증상이 보고되기 시작했습니다. 완벽하게 행복한 상태에서 갑작스러운 공허를 느끼고, <strong>존재한 적 없는 기억을 그리워하는</strong> 것이 주된 증상입니다.</p>
+                <p>당국은 이를 ‘유토피아 증후군’이라 명명하고, 증상자를 치료 시설로 이송하고 있습니다. <span class="red">치료를 마치고 돌아온 사람은 아직 없습니다.</span> 치료 시설의 위치는 <span class="redact">상층 돔 지하 3층</span>으로 기록되어 있습니다.</p>
+
+                <blockquote>
+                    <p>비가 내리는 꿈을 꿨어요. 비가 뭔지도 모르면서, 일어나 보니 울고 있었어요.</p>
+                    <cite>제7구역 증상자 상담 기록 No.0031</cite>
+                </blockquote>
+
+                <table>
+                    <thead><tr><th>단계</th><th>주요 증상</th><th>재단 조치</th></tr></thead>
+                    <tbody>
+                        <tr><td>1단계</td><td>이유 없는 공허감</td><td>기분 배정량 조정</td></tr>
+                        <tr><td>2단계</td><td>없던 기억에 대한 그리움</td><td>집중 상담</td></tr>
+                        <tr><td>3단계</td><td>외벽 너머를 향한 강한 집착</td><td><span class="red">정원사 출동</span></td></tr>
+                        <tr><td>4단계</td><td><span class="redact">감정 조율 무효화</span></td><td><span class="redact">즉시 격리 후 폐기</span></td></tr>
+                    </tbody>
                 </table>
+
+                <h3>연대기</h3>
+                <table>
+                    <thead><tr><th>연도</th><th>사건</th><th>내용</th></tr></thead>
+                    <tbody>
+                        <tr><td>E.0</td><td>대붕괴</td><td>지상의 기후 체계가 무너지고 인류의 대다수가 터전을 잃음</td></tr>
+                        <tr><td>E.12</td><td>에덴 건립</td><td>외벽과 첫 번째 돔을 완성하고 시민을 받아들임</td></tr>
+                        <tr><td>E.29</td><td>감정 조율 도입</td><td>범죄율 0% 달성, 시민 투표 찬성률 100% 기록</td></tr>
+                        <tr><td>E.41</td><td>첫 증후군 보고</td><td>제7구역에서 최초의 증상자 발견, 기록 삭제</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>주요 세력</h3>
+                <h4>EDEN 재단</h4>
+                <p>도시의 모든 것을 설계하고 관리하는 통치 기구입니다. 얼굴을 드러낸 임원은 지금까지 <strong>단 한 명도 없습니다</strong>. 시민과의 소통은 모두 자동 안내 방송과 공지로 이루어집니다.</p>
+                <h4>정원사</h4>
+                <p>재단 직속의 치안 조직입니다. 흰 제복을 입고 도시를 순찰하며, 증상자를 찾아 조용히 ‘가지치기’합니다. 이들이 지나간 자리에는 <mark>흰 꽃 한 송이</mark>가 놓입니다.</p>
+                <h4>잡초</h4>
+                <p>감정 조율을 거부한 사람들의 지하 공동체입니다. 외벽 너머의 진실을 좇고 있으며, 재단은 이들의 존재를 공식적으로 부정합니다. <span class="red">잡초와 접촉한 시민은 즉시 신고 대상이 됩니다.</span></p>
             </div>
-            <div class="stamp reveal" aria-hidden="true">대외비</div>
-            <p class="eyebrow reveal">02 / World</p>
-            <h2 class="reveal" tabindex="-1">세계관</h2>
-            <p class="lead reveal">결핍이 사라진 도시, 에덴. 사람들은 이곳에서 더 이상 아무것도 원하지 않게 되었습니다.</p>
-            <p class="scroll-cue reveal" aria-hidden="true">Scroll</p>
-        </section>
+        </article>
 
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">유토피아 증후군</h3>
-            <p class="prose reveal">에덴의 시민 일부에게서 원인 불명의 증상이 보고되기 시작했습니다. 완벽하게 행복한 상태에서 갑작스러운 공허를 느끼고, 존재한 적 없는 기억을 그리워하는 증상입니다.</p>
-            <p class="prose reveal">당국은 이를 ‘유토피아 증후군’이라 명명하고, 증상자를 치료 시설로 이송하고 있습니다. 치료를 마치고 돌아온 사람은 아직 없습니다. 이송된 시설의 위치는 <span class="redact">상층 돔 지하 3층</span>입니다.</p>
-        </section>
-
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">연대기</h3>
-            <ol class="timeline">
-                <li class="reveal"><b>E.0</b><div><h4>대붕괴</h4><p>지상의 기후 체계가 무너지고 인류의 대다수가 터전을 잃습니다.</p></div></li>
-                <li class="reveal"><b>E.12</b><div><h4>에덴 건립</h4><p>EDEN 재단이 외벽과 첫 번째 돔을 완성하고 시민을 받아들입니다.</p></div></li>
-                <li class="reveal"><b>E.29</b><div><h4>감정 조율 도입</h4><p>범죄율이 0%에 도달하고, 시민 투표에서 찬성률 100%를 기록합니다.</p></div></li>
-                <li class="reveal"><b>E.41</b><div><h4>첫 증후군 보고</h4><p>제7구역에서 최초의 증상자가 발견됩니다. 증상자 <span class="redact">이서윤</span>의 기록은 곧바로 삭제됩니다.</p></div></li>
-            </ol>
-        </section>
-
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">세력</h3>
-            <div class="card-grid">
-                <article class="card reveal"><span class="card-no">A</span><h4>EDEN 재단</h4><p>도시의 모든 것을 설계하고 관리하는 통치 기구. 얼굴을 드러낸 임원은 없습니다.</p></article>
-                <article class="card reveal"><span class="card-no">B</span><h4>정원사</h4><p>재단 직속의 치안 조직. 증상자를 찾아 조용히 ‘가지치기’합니다.</p></article>
-                <article class="card reveal"><span class="card-no">C</span><h4>잡초</h4><p>감정 조율을 거부한 사람들의 지하 공동체. 외벽 너머의 진실을 좇습니다.</p></article>
-            </div>
-        </section>
-
-        <button class="next-page reveal" data-section="2"><span>다음</span>시스템</button>
+        <button class="next-page reveal" data-section="2"><span>다음 문서</span>시스템</button>
     </main>
 
     <!--시스템-->
     <main class="view page" id="view-section-2" hidden>
-        <section class="page-hero">
-            <div class="doc-head reveal">
-                <dl class="doc-meta">
+        <article class="doc">
+            <div class="doc-titlebar reveal"><span>EF-SYS-0212_시스템.edoc</span><span>읽기 전용</span></div>
+            <header class="doc-header">
+                <p class="eyebrow reveal">03 / System</p>
+                <h2 class="reveal" tabindex="-1">시스템</h2>
+                <p class="lead reveal">에덴의 시민은 수치로 관리됩니다. 당신의 수치는 당신보다 당신을 더 잘 알고 있습니다.</p>
+                <dl class="doc-meta reveal">
                     <div><dt>문서번호</dt><dd>EF-SYS-0212</dd></div>
-                    <div><dt>보안등급</dt><dd>기밀</dd></div>
-                    <div><dt>발신부서</dt><dd>시민지표연구소</dd></div>
-                    <div><dt>보존기한</dt><dd>30년</dd></div>
+                    <div><dt>보안등급</dt><dd class="red">기밀</dd></div>
+                    <div><dt>작성부서</dt><dd>시민지표연구소</dd></div>
+                    <div><dt>최종수정</dt><dd>E.41.10.27</dd></div>
                 </dl>
-                <table class="approval">
-                    <tr><th>담당</th><th>검토</th><th>승인</th></tr>
-                    <tr><td><span class="seal">印</span></td><td><span class="seal">印</span></td><td><span class="redact">승인자</span></td></tr>
+            </header>
+
+            <div class="doc-body">
+                <h3>시민 지표</h3>
+                <p>모든 시민에게는 세 가지 지표가 부여됩니다. 지표는 실시간으로 갱신되며, 배급량과 이동 권한, 거주 구역을 결정합니다. <strong>플레이어는 행동을 통해 세 지표 사이의 균형을 직접 선택</strong>하게 됩니다.</p>
+                <table>
+                    <thead><tr><th>지표</th><th>범위</th><th>상승 조건</th><th>효과</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>행복도</strong></td><td>0~100</td><td>배정된 기분 유지</td><td>배급량 증가</td></tr>
+                        <tr><td><strong>순응도</strong></td><td>0~100</td><td>재단 지시 수행</td><td>구역 이동 권한 확대</td></tr>
+                        <tr><td><strong>각성도</strong></td><td>0~100</td><td>숨겨진 진실 발견</td><td><span class="red">정원사 추적 확률 증가</span></td></tr>
+                    </tbody>
                 </table>
+                <p><mark>행복도가 100에 도달하면 측정이 종료됩니다.</mark> 측정이 종료된 시민이 어떻게 되는지는 시민 지표 안내서에 기재되어 있지 않습니다.</p>
+
+                <h3>시민 등급</h3>
+                <p>시민 등급은 세 지표의 합산으로 결정되며, 매달 첫째 날 재심사가 이루어집니다.</p>
+                <table>
+                    <thead><tr><th>등급</th><th>조건</th><th>혜택</th></tr></thead>
+                    <tbody>
+                        <tr><td>새싹</td><td>입주 직후</td><td>기본 배급, 제한 구역 이동</td></tr>
+                        <tr><td>열매</td><td>합산 150 이상</td><td>전용 숙소, 중앙 정원 출입</td></tr>
+                        <tr><td>낙원</td><td>합산 250 이상</td><td>상층 돔 이주 <span class="redact">폐기 처리 후</span></td></tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>낙원 등급 안내</strong>
+                    <p>상층 돔으로 이주한 시민과는 보안상의 이유로 연락이 제한됩니다. 가족에게는 정기적으로 자동 작성된 안부 편지가 전달됩니다.</p>
+                </div>
+
+                <h3>하루의 흐름</h3>
+                <p>게임의 하루는 네 개의 시간대로 나뉩니다. 각 시간대마다 행동을 하나씩 선택할 수 있으며, 행동하지 않은 시간은 <strong>재단이 대신 배정</strong>합니다.</p>
+                <ol>
+                    <li><strong>06:00 기상 조율</strong> — 전날의 감정 수치를 정리하고 오늘의 기분을 배정받습니다.</li>
+                    <li><strong>09:00 활동</strong> — 의뢰를 수행하거나 구역을 탐색하며 지표를 쌓습니다.</li>
+                    <li><strong>18:00 교류</strong> — 다른 시민과 대화해 호감도와 단서를 얻습니다.</li>
+                    <li><strong>23:00 꿈 동기화</strong> — 각성도가 높으면 숨겨진 기억을 볼 수 있습니다.</li>
+                </ol>
+
+                <blockquote>
+                    <p>오늘 당신의 기분은 ‘상쾌함’입니다. 좋은 하루 보내세요.</p>
+                    <cite>06:00 자동 안내 방송</cite>
+                </blockquote>
+
+                <h3>각성도 경고</h3>
+                <p>각성도가 일정 수치를 넘으면 도시의 모습이 달라지기 시작합니다. 벽에 없던 글씨가 보이고, 안내 방송의 내용이 어긋나며, 다른 시민의 표정이 멈춰 보일 수 있습니다.</p>
+                <p><span class="red"><strong>각성도 80 이상에서는 세이브 슬롯이 하나로 제한됩니다.</strong></span> 이 구간에서 내리는 선택은 되돌릴 수 없습니다.</p>
             </div>
-            <div class="stamp reveal" aria-hidden="true">기밀</div>
-            <p class="eyebrow reveal">03 / System</p>
-            <h2 class="reveal" tabindex="-1">시스템</h2>
-            <p class="lead reveal">에덴의 시민은 수치로 관리됩니다. 당신의 수치는 당신보다 당신을 더 잘 알고 있습니다.</p>
-            <p class="scroll-cue reveal" aria-hidden="true">Scroll</p>
-        </section>
+        </article>
 
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">시민 지표</h3>
-            <div class="stat-list">
-                <div class="stat reveal"><div class="stat-head"><h4>행복도</h4><span>98</span></div><div class="meter" style="--v:98%"></div><p>높을수록 배급이 늘어납니다. 100이 되면 측정이 종료됩니다.</p></div>
-                <div class="stat reveal"><div class="stat-head"><h4>순응도</h4><span>72</span></div><div class="meter" style="--v:72%"></div><p>재단의 지시를 따를 때 오르며, 구역 이동 권한을 결정합니다.</p></div>
-                <div class="stat reveal"><div class="stat-head"><h4>각성도</h4><span>14</span></div><div class="meter meter--alert" style="--v:14%"></div><p>숨겨진 진실을 볼수록 오릅니다. 정원사의 눈에 띄기 쉬워집니다.</p></div>
-            </div>
-        </section>
-
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">시민 등급</h3>
-            <div class="card-grid">
-                <article class="card reveal"><span class="card-no">1</span><h4>새싹</h4><p>입주 직후의 등급. 기본 배급과 제한 구역 이동이 가능합니다.</p></article>
-                <article class="card reveal"><span class="card-no">2</span><h4>열매</h4><p>전용 숙소를 받고 중앙 정원에 자유롭게 출입할 수 있습니다.</p></article>
-                <article class="card reveal"><span class="card-no">3</span><h4>낙원</h4><p>최상위 등급. 승급한 시민은 <span class="redact">폐기 처리 후</span> 상층 돔으로 이주하며 연락이 끊깁니다.</p></article>
-            </div>
-        </section>
-
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">하루의 흐름</h3>
-            <ol class="timeline">
-                <li class="reveal"><b>06:00</b><div><h4>기상 조율</h4><p>전날의 감정 수치를 정리하고 오늘의 기분을 배정받습니다.</p></div></li>
-                <li class="reveal"><b>09:00</b><div><h4>활동</h4><p>의뢰를 수행하거나 구역을 탐색하며 지표를 쌓습니다.</p></div></li>
-                <li class="reveal"><b>18:00</b><div><h4>교류</h4><p>다른 시민과 대화해 호감도와 단서를 얻습니다.</p></div></li>
-                <li class="reveal"><b>23:00</b><div><h4>꿈 동기화</h4><p>각성도가 높으면 동기화 중에 숨겨진 기억을 볼 수 있습니다.</p></div></li>
-            </ol>
-        </section>
-
-        <button class="next-page reveal" data-section="3"><span>다음</span>전투</button>
+        <button class="next-page reveal" data-section="3"><span>다음 문서</span>전투</button>
     </main>
 
     <!--전투-->
     <main class="view page" id="view-section-3" hidden>
-        <section class="page-hero">
-            <div class="doc-head reveal">
-                <dl class="doc-meta">
+        <article class="doc">
+            <div class="doc-titlebar reveal"><span>EF-SEC-0666_전투.edoc</span><span>읽기 전용</span></div>
+            <header class="doc-header">
+                <p class="eyebrow reveal">04 / Combat</p>
+                <h2 class="reveal" tabindex="-1">전투</h2>
+                <p class="lead reveal">에덴에 폭력은 존재하지 않습니다. 공식적으로는 그렇습니다.</p>
+                <dl class="doc-meta reveal">
                     <div><dt>문서번호</dt><dd>EF-SEC-0666</dd></div>
-                    <div><dt>보안등급</dt><dd>극비</dd></div>
-                    <div><dt>발신부서</dt><dd>정원관리본부</dd></div>
-                    <div><dt>보존기한</dt><dd>열람 후 파기</dd></div>
+                    <div><dt>보안등급</dt><dd class="red">극비</dd></div>
+                    <div><dt>작성부서</dt><dd>정원관리본부</dd></div>
+                    <div><dt>최종수정</dt><dd><span class="redact">E.41.11.02</span></dd></div>
                 </dl>
-                <table class="approval">
-                    <tr><th>담당</th><th>검토</th><th>승인</th></tr>
-                    <tr><td><span class="seal">印</span></td><td><span class="seal">印</span></td><td><span class="redact">승인자</span></td></tr>
+            </header>
+
+            <div class="doc-body">
+                <h3>기본 규칙</h3>
+                <p>전투는 턴제로 진행됩니다. 체력이 0이 되면 전투에서 패배하고, 정신력이 0이 되면 증후군이 발현합니다. <strong>체력보다 정신력을 관리하는 것이 전투의 핵심</strong>입니다.</p>
+                <p>전투 중에 내린 선택은 시민 지표에도 영향을 줍니다. 공격을 많이 할수록 순응도가 떨어지고, 조율을 많이 할수록 각성도가 오릅니다. <mark>전투를 피하는 것도 하나의 전략</mark>입니다.</p>
+
+                <h3>턴 진행</h3>
+                <ol>
+                    <li><strong>감지</strong> — 주변의 적과 각성도를 비교해 선공을 결정합니다.</li>
+                    <li><strong>선택</strong> — 공격, 방어, 조율, 도주 중 하나의 행동을 고릅니다.</li>
+                    <li><strong>판정</strong> — 주사위와 지표를 합산해 행동의 성공 여부를 판정합니다.</li>
+                    <li><strong>여파</strong> — 결과에 따라 체력과 정신력, 시민 지표가 변화합니다.</li>
+                </ol>
+
+                <h3>행동</h3>
+                <table>
+                    <thead><tr><th>행동</th><th>효과</th><th>대가</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>공격</strong></td><td>무기로 적의 체력을 깎음</td><td>순응도 -3</td></tr>
+                        <tr><td><strong>방어</strong></td><td>다음 피해 절반, 반격 기회 획득</td><td>없음</td></tr>
+                        <tr><td><strong>조율</strong></td><td>상대의 감정에 간섭해 무력화</td><td>정신력 -10, 각성도 +2</td></tr>
+                        <tr><td><strong>도주</strong></td><td>전투에서 이탈</td><td><span class="red">실패 시 정원사 증원</span></td></tr>
+                    </tbody>
                 </table>
-            </div>
-            <div class="stamp reveal" aria-hidden="true">극비</div>
-            <p class="eyebrow reveal">04 / Combat</p>
-            <h2 class="reveal" tabindex="-1">전투</h2>
-            <p class="lead reveal">에덴에 폭력은 존재하지 않습니다. 공식적으로는 그렇습니다.</p>
-            <p class="scroll-cue reveal" aria-hidden="true">Scroll</p>
-        </section>
 
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">턴 진행</h3>
-            <ol class="step-list">
-                <li class="reveal"><h4>감지</h4><p>주변의 적과 각성도를 비교해 선공을 결정합니다.</p></li>
-                <li class="reveal"><h4>선택</h4><p>공격, 방어, 조율, 도주 중 하나의 행동을 고릅니다.</p></li>
-                <li class="reveal"><h4>판정</h4><p>주사위와 지표를 합산해 행동의 성공 여부를 판정합니다.</p></li>
-                <li class="reveal"><h4>여파</h4><p>결과에 따라 체력과 정신력, 시민 지표가 변화합니다.</p></li>
-            </ol>
-        </section>
+                <h3>주요 적</h3>
+                <table>
+                    <thead><tr><th>이름</th><th>위험도</th><th>특징</th></tr></thead>
+                    <tbody>
+                        <tr><td>순찰 정원사</td><td>하</td><td>일반 순찰 병력. 혼자 다니지 않음</td></tr>
+                        <tr><td>조율 드론</td><td>중</td><td>정신력을 지속적으로 감소시킴</td></tr>
+                        <tr><td>수석 정원사</td><td><span class="red"><strong>상</strong></span></td><td>각성도 60 이상일 때 추적 시작</td></tr>
+                        <tr><td><span class="redact">최종 관리자</span></td><td><span class="redact">측정 불가</span></td><td><span class="redact">재단 임원의 실체</span></td></tr>
+                    </tbody>
+                </table>
 
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">행동</h3>
-            <div class="card-grid card-grid--four">
-                <article class="card reveal"><span class="card-no">ATK</span><h4>공격</h4><p>무기로 적의 체력을 깎습니다. 사용 시 순응도가 감소합니다.</p></article>
-                <article class="card reveal"><span class="card-no">DEF</span><h4>방어</h4><p>다음 피해를 절반으로 줄이고 반격 기회를 얻습니다.</p></article>
-                <article class="card reveal"><span class="card-no">SYN</span><h4>조율</h4><p>상대의 감정에 간섭해 적을 무력화합니다. 정신력을 소모합니다.</p></article>
-                <article class="card reveal"><span class="card-no">ESC</span><h4>도주</h4><p>전투에서 이탈합니다. 실패하면 정원사 <span class="redact">12명</span>이 증원됩니다.</p></article>
-            </div>
-        </section>
+                <blockquote>
+                    <p>저항하지 마십시오. 가지치기는 나무를 위한 일입니다.</p>
+                    <cite>정원관리본부 현장 수칙 제3조</cite>
+                </blockquote>
 
-        <section class="chapter reveal">
-            <h3 class="chapter-title reveal">증후군 발현</h3>
-            <div class="callout callout--alert reveal">
-                <strong>정신력이 0이 되면 증후군이 발현합니다.</strong>
-                <p>3턴 동안 모든 능력치가 두 배가 되지만, 아군과 적을 구분할 수 없게 됩니다. 발현 후 각성도가 크게 오릅니다.</p>
+                <h3>증후군 발현</h3>
+                <p>정신력이 0이 되면 전투 불능이 되는 대신 증후군이 발현합니다. 3턴 동안 <mark>모든 능력치가 두 배</mark>가 되지만, 아군과 적을 구분할 수 없게 되어 행동의 대상이 무작위로 정해집니다.</p>
+
+                <div class="note note--alert">
+                    <strong>경고</strong>
+                    <p>발현이 끝나면 각성도가 크게 오르며, <span class="red">쓰러뜨린 동료는 되살릴 수 없습니다.</span></p>
+                </div>
             </div>
-        </section>
+        </article>
 
         <button class="next-page reveal" data-home><span>처음으로</span>메인</button>
     </main>

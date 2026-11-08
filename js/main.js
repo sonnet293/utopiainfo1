@@ -62,6 +62,51 @@
         }
     });
 
+    /* ---------- 문서 자동 구성 ---------- */
+    // 넓은 표는 모바일에서 가로로 스크롤할 수 있게 감싸기
+    document.querySelectorAll('.doc-body table').forEach((table) => {
+        const wrap = document.createElement('div');
+        wrap.className = 'table-wrap';
+        wrap.tabIndex = 0;
+        table.replaceWith(wrap);
+        wrap.append(table);
+    });
+
+    // 본문의 모든 블록에 스크롤 등장 애니메이션 적용
+    document.querySelectorAll('.doc-body > *').forEach((block) => block.classList.add('reveal'));
+
+    // 제목(h3)으로 왼쪽 목차 만들기
+    const outlines = new Map();
+    document.querySelectorAll('.page').forEach((page) => {
+        const toc = document.createElement('nav');
+        toc.className = 'doc-toc';
+        toc.setAttribute('aria-label', '목차');
+        toc.innerHTML = '<p>CONTENTS</p>';
+
+        const items = [...page.querySelectorAll('.doc-body h3')].map((heading) => {
+            const button = document.createElement('button');
+            button.textContent = heading.textContent;
+            button.addEventListener('click', () => heading.scrollIntoView({ behavior: 'smooth' }));
+            toc.append(button);
+            return { heading, button };
+        });
+
+        page.prepend(toc);
+        outlines.set(page, items);
+    });
+
+    function updateOutline() {
+        const items = outlines.get(activeView);
+        if (!items) return;
+
+        const line = pageBar.offsetHeight + 80;
+        const current = items.filter(({ heading }) => heading.getBoundingClientRect().top < line).pop();
+        items.forEach((item) => {
+            if (item === current) item.button.setAttribute('aria-current', 'true');
+            else item.button.removeAttribute('aria-current');
+        });
+    }
+
     /* ---------- 스크롤 등장 ---------- */
     function watchReveals(view) {
         if (observer) observer.disconnect();
@@ -95,6 +140,7 @@
         const max = document.documentElement.scrollHeight - window.innerHeight;
         const ratio = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
         progress.style.setProperty('--progress', ratio);
+        updateOutline();
     }
 
     /* ---------- 페이지 전환 ---------- */
