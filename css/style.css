@@ -409,11 +409,21 @@ h2:focus { outline: none; }
 
 mark {
     padding: .05em .25em;
-    background: var(--highlight);
+    background: linear-gradient(var(--highlight), var(--highlight)) no-repeat 0 0 / 100% 100%;
     color: var(--highlight-text);
     font-weight: 500;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+}
+
+/* 읽는 위치에 도달하면 형광펜이 왼쪽부터 그어짐 (여러 줄이면 윗줄부터 차례로) */
+.js mark {
+    background-size: 0% 100%;
+    color: var(--text);
+    transition: background-size .8s cubic-bezier(.45, .05, .35, 1) .15s, color .3s linear .45s;
+}
+
+.js mark.is-drawn {
+    background-size: 100% 100%;
+    color: var(--highlight-text);
 }
 
 .red, .doc-body .red strong { color: var(--red); }

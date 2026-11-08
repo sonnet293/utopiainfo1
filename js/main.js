@@ -14,6 +14,7 @@
 
     let entered = false;
     let observer = null;
+    let markObserver = null;
     let activeView = null;
 
     /* ---------- BGM ---------- */
@@ -134,10 +135,36 @@
 
         // 숨김 해제 직후의 레이아웃이 반영된 뒤에 관찰 시작
         requestAnimationFrame(() => items.forEach((item) => observer.observe(item)));
+
+        watchMarks(view);
+    }
+
+    /* ---------- 형광펜 ---------- */
+    function watchMarks(view) {
+        if (markObserver) markObserver.disconnect();
+
+        const marks = view.querySelectorAll('mark');
+        marks.forEach((mark) => mark.classList.remove('is-drawn'));
+
+        // 화면 아래쪽 22%를 지나 읽는 위치에 들어왔을 때 긋기
+        markObserver = new IntersectionObserver((entries) => {
+            entries.filter((entry) => entry.isIntersecting).forEach((entry) => {
+                entry.target.classList.add('is-drawn');
+                markObserver.unobserve(entry.target);
+            });
+        }, { rootMargin: '0px 0px -22% 0px' });
+
+        requestAnimationFrame(() => marks.forEach((mark) => markObserver.observe(mark)));
     }
 
     function updateProgress() {
         const max = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 문서 끝에서는 읽는 위치까지 올라오지 못한 형광펜도 마저 긋기
+        if (activeView && max - window.scrollY <= 2) {
+            activeView.querySelectorAll('mark').forEach((mark) => mark.classList.add('is-drawn'));
+        }
+
         const ratio = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
         progress.style.setProperty('--progress', ratio);
         updateOutline();
