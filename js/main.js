@@ -2,6 +2,10 @@
     const SECTIONS = ['notice', 'world', 'system', 'combat'];
     const BGM_VOLUME = 0.6;
     const STAGGER_MS = 90;
+    const STATIC_MS = 900;
+    const STATIC_PEAK = 0.5;
+    const STATIC_FRAME_MS = 40;
+    const STATIC_PIXEL = 3;
 
     const body = document.body;
     const intro = document.getElementById('intro-overlay');
@@ -225,6 +229,61 @@
     window.addEventListener('resize', updateProgress);
 
     /* ---------- 인트로 ---------- */
+    // 저해상도로 그린 뒤 확대해서 굵은 TV 노이즈 입자를 만듦
+    function playStatic(onPeak) {
+        const canvas = document.getElementById('static-noise');
+        const width = Math.ceil(window.innerWidth / STATIC_PIXEL);
+        const height = Math.ceil(window.innerHeight / STATIC_PIXEL);
+        canvas.width = width;
+        canvas.height = height;
+        canvas.hidden = false;
+
+        const ctx = canvas.getContext('2d');
+        const image = ctx.createImageData(width, height);
+        const pixels = new Uint32Array(image.data.buffer);
+        const start = performance.now();
+        let lastDraw = -Infinity;
+        let peaked = false;
+
+        const draw = (intensity) => {
+            const alpha = Math.round(intensity * 255) << 24;
+            let tear = 0;
+            for (let y = 0, i = 0; y < height; y += 1) {
+                // 가끔 밝은 가로줄이 몇 줄씩 이어지며 화면이 찢어지는 느낌을 줌
+                if (tear > 0) tear -= 1;
+                else if (Math.random() < 0.012) tear = 1 + Math.floor(Math.random() * 6);
+                const base = tear > 0 ? 130 : 0;
+                for (let x = 0; x < width; x += 1, i += 1) {
+                    const v = Math.min(255, base + Math.floor(Math.random() * 200));
+                    pixels[i] = alpha | (v << 16) | (v << 8) | v;
+                }
+            }
+            ctx.putImageData(image, 0, 0);
+        };
+
+        const step = (now) => {
+            const t = Math.max(0, (now - start) / STATIC_MS);
+            if (!peaked && t >= STATIC_PEAK) {
+                peaked = true;
+                onPeak();
+            }
+            if (t >= 1) {
+                canvas.hidden = true;
+                return;
+            }
+            // 프레임을 일부러 낮춰 지지직거리는 질감을 살림
+            if (now - lastDraw >= STATIC_FRAME_MS) {
+                lastDraw = now;
+                const intensity = t < STATIC_PEAK
+                    ? (t / STATIC_PEAK) ** 2
+                    : (1 - (t - STATIC_PEAK) / (1 - STATIC_PEAK)) * (0.65 + Math.random() * 0.35);
+                draw(intensity);
+            }
+            requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+    }
+
     function enter() {
         if (entered) return;
         entered = true;
@@ -234,6 +293,18 @@
         playBgm();
         fadeInBgm();
 
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            intro.classList.add('is-glitching');
+            playStatic(() => {
+                // 노이즈가 화면을 가린 순간 메인으로 교체
+                intro.hidden = true;
+                body.classList.remove('is-locked');
+                render({ focus: false });
+            });
+            return;
+        }
+
+        // 움직임 줄이기 설정에서는 깜빡임 없이 페이드만 적용
         intro.classList.add('is-leaving');
         body.classList.remove('is-locked');
 

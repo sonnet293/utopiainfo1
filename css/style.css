@@ -132,6 +132,44 @@ h2:focus { outline: none; }
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } }
 @keyframes blink { 50% { opacity: .25; } }
 
+/* 터치 후 지지직 전환 */
+#intro-overlay.is-glitching { pointer-events: none; }
+
+.is-glitching .intro-logo,
+.is-glitching .intro-tagline,
+.is-glitching .intro-hint {
+    animation: glitch .36s steps(1) infinite;
+}
+
+.is-glitching .intro-logo {
+    text-shadow: 4px 0 rgba(255, 60, 70, .85), -4px 0 rgba(60, 220, 255, .85);
+}
+
+.is-glitching .intro-ring { animation: glitch-flicker .18s steps(1) infinite; }
+
+#static-noise {
+    position: fixed;
+    inset: 0;
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    image-rendering: pixelated;
+}
+
+@keyframes glitch {
+    0%   { transform: translate(-6px, 1px);  clip-path: inset(0 0 58% 0); }
+    20%  { transform: translate(9px, -2px);  clip-path: inset(46% 0 12% 0); }
+    40%  { transform: translate(-3px, 2px);  clip-path: inset(0); }
+    60%  { transform: translate(12px, 0);    clip-path: inset(18% 0 50% 0); }
+    80%  { transform: translate(-10px, -1px); clip-path: inset(62% 0 0 0); }
+}
+@keyframes glitch-flicker {
+    0%  { opacity: .9; }
+    33% { opacity: .1; }
+    66% { opacity: .5; }
+}
+
 /* ---------- 스크롤 등장 애니메이션 ---------- */
 .js .reveal {
     opacity: 0;
