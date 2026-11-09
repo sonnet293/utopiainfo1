@@ -21,6 +21,9 @@
     let markObserver = null;
     let activeView = null;
 
+    // 새로고침이나 재방문 시 주소에 남은 해시를 지워 항상 메인부터 시작
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+
     /* ---------- BGM ---------- */
     function fadeInBgm() {
         const start = performance.now();
