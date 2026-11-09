@@ -441,6 +441,24 @@ h2:focus { outline: none; }
 .doc-body ul, .doc-body ol { padding-left: 1.5em; }
 .doc-body li { margin-bottom: .5em; padding-left: .2em; }
 .doc-body li::marker { color: var(--muted); }
+.doc-body li > ul, .doc-body li > ol { margin-top: .5em; }
+
+/* 불릿: 서류 느낌의 네모 표시, 하위 목록은 빈 네모 */
+.doc-body ul { list-style: none; }
+.doc-body ul > li { position: relative; }
+
+.doc-body ul > li::before {
+    content: "";
+    position: absolute;
+    top: calc(.95em - 3px); /* 본문 줄 높이(1.9)의 가운데 */
+    left: -1.1em;
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--muted);
+    background: var(--muted);
+}
+
+.doc-body ul ul > li::before { background: transparent; }
 
 /* 강조 */
 .doc-body strong, .doc-meta strong { color: var(--heading); font-weight: 700; }
